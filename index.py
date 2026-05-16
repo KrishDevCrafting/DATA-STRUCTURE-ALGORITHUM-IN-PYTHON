@@ -92,5 +92,45 @@ marks = {
 print(marks.items())
 print(marks.values())
 
-s = set()
-print(s)
+# s = set()
+# print(s)
+
+# s = set()
+# v = input("ENTER THE NUMBER!")
+# s.add(int(v))
+# v = input("ENTER THE NUMBER!")
+# s.add(int(v))
+# v = input("ENTER THE NUMBER!")
+# s.add(int(v))
+# v = input("ENTER THE NUMBER!")
+# s.add(int(v))
+# v = input("ENTER THE NUMBER!")
+# s.add(int(v))
+# v = input("ENTER THE NUMBER!")
+# s.add(int(v))
+# v = input("ENTER THE NUMBER!")
+# s.add(int(v))
+# print(s)
+
+
+# Dictonary!
+fn = {}
+words = input("Enter friends name:")
+meaning = input("Enter Language name:")
+
+fn.update({words:meaning})
+
+print(fn)
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
