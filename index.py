@@ -165,3 +165,89 @@ for item in list:
     print(item)
 else:
     print("done")
+    # Write a program to find the greatest of four numbers entered by the user.
+
+    # a = int(input("Enter the Number!"))
+    # b = int(input("Enter the Number!"))
+    # c = int(input("Enter the Number!"))
+    # d = int(input("Enter the Number!"))
+
+
+
+
+    # Output = max(a,b,c,d)
+
+    # print(Output,"greatest_Number")
+
+
+    # 2. Write a program to find out whether a student has passed or failed if it requires a total of 40% and at least 33% in each subject to pass. Assume 3 subjects and take marks as an input from the user.
+
+
+
+    # marks1 = int(input("Enter the Marks of the student!"))
+    # marks2 = int(input("Enter the Marks of the student!"))
+    # marks3 = int(input("Enter the Marks of the student!"))
+
+    # total_percentage = (marks1 + marks2 + marks3) / 3
+
+    # if total_percentage >= 40 and marks1 >= 33 and marks2 >= 33 and marks3 >= 33:
+    #     print("You passed!")
+    # else:
+    #     print("You failed!")
+
+
+#  A spam comment is defined as a text containing following keywords: “Make a lot of
+# money”, “buy now”, “subscribe this”, “click this”. Write a program to detect these spams.
+
+# comment = input("Enter Your Comment: ").lower()
+
+# if ("make a lot of money" in comment or "buy now" in comment or "subscribe this" in comment or "click this" in comment):
+#     print("Spam Comments!")
+# else:
+#     print("Not a Spam comment. Good to go!")
+
+# Write a program to find whether a given username contains less than 10 characters or not.
+
+# username = input("Enter the Username ")
+
+# if len(username) > 10:
+#     print("Characters is not less than 10")
+# else: 
+#     print("Not...")
+
+
+# '''Write a program to calculate the grade of a student from his marks from the following
+# scheme:
+# 90 – 100 => Ex
+# 80 – 90 => A
+# 70 – 80 => B
+# 60 – 70 => C
+# 50 – 60 => D
+# <50 => F'''
+
+# GradeCal = int(input("Enter the Grade Score..."))
+
+# if GradeCal >= 90 and GradeCal <=100:
+#     print("Ex")
+# elif GradeCal >=80:
+#     print("A")
+
+# elif GradeCal >=70:
+#     print("B")
+
+# elif GradeCal >=60:
+#     print("C")
+# elif GradeCal >=50:
+#     print("D")
+# else:
+#     print("Next try better...")
+
+# 7. Write a program to find out whether a given post is talking about “Harry” or not.
+
+
+# post = input("Enter the post comment...").lower()
+
+# if "harry" in post:
+#     print("Talking about Harry")
+# else:
+#     print("Not talking about Harry")
