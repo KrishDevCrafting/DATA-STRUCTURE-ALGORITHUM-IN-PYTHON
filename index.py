@@ -114,13 +114,13 @@ print(marks.values())
 
 
 # Dictonary!
-fn = {}
-words = input("Enter friends name:")
-meaning = input("Enter Language name:")
+# fn = {}
+# words = input("Enter friends name:")
+# meaning = input("Enter Language name:")
 
-fn.update({words:meaning})
+# fn.update({words:meaning})
 
-print(fn)
+# print(fn)
  
  
 
@@ -129,8 +129,39 @@ print(fn)
 
 
 
+# Name Listed Program...
+# name = ["Krish","Rachit,Aarushi","Deepak"]
+
+# EnterInput = input("Enter the name:")
+
+# if(EnterInput in name):
+#     print("Your Name is listed!")
+# else: 
+#     print("Fuck-Off..")
+
+
+# LOOP in py
+
+for counting in range(1,11):
+    print("numbers",counting)
 
 
 
 
+kk = ["Harry", "Coke", "Diet_coke", "pepsi", "KFC", "Sting"]
 
+i = 0
+
+while i < len(kk):
+    print(kk[i])
+    i += 1
+
+print(len(kk))
+
+
+list = [1,2,3,4,5,7,8,9,10]
+
+for item in list:
+    print(item)
+else:
+    print("done")
