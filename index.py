@@ -251,3 +251,9 @@ else:
 #     print("Talking about Harry")
 # else:
 #     print("Not talking about Harry")
+
+
+table = int(input("Enter a Number!"))
+
+for i in range(1,11):
+    print(f"{table} * {i} = {table*i}")
