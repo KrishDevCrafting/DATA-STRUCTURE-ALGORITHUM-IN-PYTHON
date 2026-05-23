@@ -253,7 +253,87 @@ else:
 #     print("Not talking about Harry")
 
 
-table = int(input("Enter a Number!"))
+# table = int(input("Enter a Number!"))
 
-for i in range(1,11):
-    print(f"{table} * {i} = {table*i}")
+# for i in range(1,11):
+#     print(f"{table} * {i} = {table*i}")
+
+
+# list
+
+# names = ["Harry","Soham","Sachin","Rahul"]
+
+# for name in names:
+#     if name.startswith("S"):
+#         print(f"Hello {name}")
+
+# Prime or not
+
+# primeNumer = int(input("Enter the number plz.."))
+
+# for i in range(2,primeNumer):
+#     if(primeNumer%i) == 0:
+#         print("It's a prime number..")
+#         break
+#     else:
+#         print("Not a Prime number..")
+
+
+# primeNumber = int(input("Enter the number plz.. "))
+
+# if primeNumber < 2:
+#     print("Not a Prime number..")
+# else:
+#     for i in range(2, primeNumber):
+#         if primeNumber % i == 0:
+#             print("Not a Prime number..")  # Divisible hai → NOT prime
+#             break
+#     else:
+#         # Yeh for-else hai — jab loop bina break ke finish ho, tab chale
+#         print("It's a Prime number..")  # Kisi se divide nahi hua → Prime!
+
+# Natural number Sum:
+# n = int(input("Enter the natural number:"))
+
+
+# i = 1
+# sum = 0
+# while(i<=n):
+#     sum += i
+#     i +=1
+    
+# print(sum)
+
+# find Factorial Number 1*2*3*4*5
+
+# f = int(input("Enter the Real number!"))
+
+# product = 1
+# for i in range(1,f+1):
+#     product = product * i
+# print(f"The factorial of {f} is {product}")
+# product = 1
+# i = 1
+# while i <= f:
+#     product = product * i
+#     i = i + 1
+#     print(f"The factorial of {f}is{product}")
+
+# Star Method
+
+
+#   *
+#  ***
+# *****
+n = int(input("Enter the star number!"))
+
+for i in range(1,n + 1):
+    print(" " * (n - i), end="")
+    print("*" * (2 * i- 1), end="" )
+    print("")
+
+
+
+
+
+
