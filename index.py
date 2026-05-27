@@ -325,25 +325,52 @@ else:
 #   *
 #  ***
 # *****
-n = int(input("Enter the star number!"))
+# n = int(input("Enter the star number!"))
 
-for i in range(1,n + 1):
-    print(" " * (n - i), end="")
-    print("*" * (2 * i- 1), end="" )
-    print("")
+# for i in range(1,n + 1):
+#     print(" " * (n - i), end="")
+#     print("*" * (2 * i- 1), end="" )
+#     print("")
 
 
 
 # Factorial using Recursion
 
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n-1)
-print(f"The factorial of {n} is {factorial(5)}")
+# def factorial(n):
+#     if n == 0 or n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+# print(f"The factorial of {n} is {factorial(5)}")
 
 
 # hello
+# find the gratest of 3 numbers
+
+# a = int(input("Enter the first number: "))
+# b = int(input("Enter the second number: "))
+# c = int(input("Enter the third number: "))
+
+# def greatest(a,b,c):
+#     if a>=b and a>=c:
+#         return a
+#     elif b>=a and b>=c:
+#         return b
+#     elif c>=b and c>=a:
+#         return c
+# print(f"The greatest number is {greatest(a,b,c)}")
 
 
+# print("a",end="")
+# print("b",end="")
+# print("c",end="")
+
+# sum
+
+def sum(n):
+    if n == 1:
+        return 1
+    else: 
+        return sum(n-1) + n
+     
+print(sum(4))
