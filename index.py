@@ -325,15 +325,27 @@ else:
 #   *
 #  ***
 # *****
-n = int(input("Enter the star number!"))
+# n = int(input("Enter the star number!"))
 
-for i in range(1,n + 1):
-    print(" " * (n - i), end="")
-    print("*" * (2 * i- 1), end="" )
-    print("")
-
-
+# for i in range(1,n + 1):
+#     print(" " * (n - i), end="")
+#     print("*" * (2 * i- 1), end="" )
+#     print("")
 
 
+# Reverse Table..
+n = int(input("Enter the number:"))
+
+for i in range(1,11):
+    print(f"{n} X {11-i} = {n*(11-i)} ")
+
+# Function...
+def goodDay(name,ending):
+    print("Good Day,"+name)
+    print(ending)
+    return "ok"
+
+a = goodDay("Harry","Thank you")
+print(a)
 
 
