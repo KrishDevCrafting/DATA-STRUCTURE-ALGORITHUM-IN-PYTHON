@@ -148,7 +148,7 @@ for counting in range(1,11):
 
 
 
-kk = ["Harry", "Coke", "Diet_coke", "pepsi", "KFC", "Sting"]
+kk = ["Nikhil", "Akaansh", "Divyance", "pepsi", "KFC", "Sting"]
 
 i = 0
 
@@ -389,12 +389,20 @@ print(a)
 # print("c",end="")
 
 # sum
-
 def sum(n):
     if n == 1:
         return 1
     else: 
         return sum(n-1) + n
      
-print(sum(4))
+man = int(input("Enter the value: "))
 
+print(sum(man))
+
+
+# a = ["House","of","ballon"]
+
+# i = 0
+# while  i< len(a):
+#     print("Loop value: ",a[i])
+#     i += 1
