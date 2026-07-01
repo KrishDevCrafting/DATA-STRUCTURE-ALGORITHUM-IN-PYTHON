@@ -38,7 +38,7 @@ print(word[1:6:2])
 
 
 arry = ["krish",1,0.25,True,'Apple'];
-
+# insert(index,element)
 arry.insert(3, "Napolean-Hill")
 print(arry)
 
