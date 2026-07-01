@@ -17,11 +17,11 @@ print(a % b)
 
 # print(a1>b2)
 
-# Name = "KRISH"
+Name = "KRISH"
 
-# shortName = Name[0:3]
+shortName = Name[0:3]
 
-# print(shortName)
+print(shortName)
 
 
 # value = "Hey \" Krish\" what's going \n on did you finish your homework or not?"
