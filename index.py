@@ -1,8 +1,8 @@
-# import pyjokes
+import pyjokes
 
-# variable = pyjokes.get_joke()
+variable = pyjokes.get_joke()
 
-# print(variable)
+print(variable)
 
 
 a = 5
@@ -12,21 +12,21 @@ print(a % b)
 
 
 
-a1 = 34
-b2 = 80
+# a1 = 34
+# b2 = 80
 
-print(a1>b2)
+# print(a1>b2)
 
-Name = "KRISH"
+# Name = "KRISH"
 
-shortName = Name[0:3]
+# shortName = Name[0:3]
 
-print(shortName)
+# print(shortName)
 
 
-value = "Hey \" Krish\" what's going \n on did you finish your homework or not?"
+# value = "Hey \" Krish\" what's going \n on did you finish your homework or not?"
 
-print(value)
+# print(value)
 
 # name = input("Enter your Name plz..")
 
@@ -333,7 +333,10 @@ else:
 #     print("*" * (2 * i- 1), end="" )
 #     print("")
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 # for i in range(1,n + 1):
 #     print(" " * (n - i), end="")
