@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+
+
+
+#heading {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    padding-top: 2%;
+    align-items: center;
+    justify-content: space-around;
+        border: 1px solid red;
+        height: 100vh;
+
+}
+
+.box-1{
+    
+    border: 1px solid red;
+}

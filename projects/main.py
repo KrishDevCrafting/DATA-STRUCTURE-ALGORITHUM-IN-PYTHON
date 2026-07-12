@@ -1,5 +1,17 @@
 # ROCK, PAPAR and SCISSORS GAME:
 
+
+
+
+
+
+
+
+
+
+
+
+
 import random
 
 '''
@@ -28,6 +40,8 @@ reverseDIC = {
     0: "scissor"
 }
 
+
+
 usersnum = youDIC[users]
 
 print(f"COMPUTER CHOICE: {reverseDIC[computer]}")
@@ -49,3 +63,14 @@ else:
         print("YOU WIN!")
     else:
         print("Something went wrong!")
+
+
+    def fn():
+     return "hello_world"
+
+print(fn())
+
+
+
+
+

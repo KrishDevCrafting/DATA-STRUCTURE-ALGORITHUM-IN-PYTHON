@@ -406,3 +406,7 @@ print(sum(man))
 # while  i< len(a):
 #     print("Loop value: ",a[i])
 #     i += 1
+
+
+# PRACTISE SET-9
+# Write a program to read the text from a given file 'poems.txt' and find out weather it contains the word 'twinkle'.
