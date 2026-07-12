@@ -1,3 +1,4 @@
+import random
 import pyjokes
 
 variable = pyjokes.get_joke()
@@ -350,19 +351,19 @@ else:
 # print(f"The factorial of {n} is {factorial(5)}")
 
 # Reverse Table..
-n = int(input("Enter the number:"))
+# n = int(input("Enter the number:"))
 
-for i in range(1,11):
-    print(f"{n} X {11-i} = {n*(11-i)} ")
+# for i in range(1,11):
+#     print(f"{n} X {11-i} = {n*(11-i)} ")
 
-# Function...
-def goodDay(name,ending):
-    print("Good Day,"+name)
-    print(ending)
-    return "ok"
+# # Function...
+# def goodDay(name,ending):
+#     print("Good Day,"+name)
+#     print(ending)
+#     return "ok"
 
-a = goodDay("Harry","Thank you")
-print(a)
+# a = goodDay("Harry","Thank you")
+# print(a)
 
 # hello
 # find the gratest of 3 numbers
@@ -389,15 +390,15 @@ print(a)
 # print("c",end="")
 
 # sum
-def sum(n):
-    if n == 1:
-        return 1
-    else: 
-        return sum(n-1) + n
+# def sum(n):
+#     if n == 1:
+#         return 1
+#     else: 
+#         return sum(n-1) + n
      
-man = int(input("Enter the value: "))
+# man = int(input("Enter the value: "))
 
-print(sum(man))
+# print(sum(man))
 
 
 # a = ["House","of","ballon"]
@@ -409,4 +410,46 @@ print(sum(man))
 
 
 # PRACTISE SET-9
-# Write a program to read the text from a given file 'poems.txt' and find out weather it contains the word 'twinkle'.
+# Write a program to read the text from a given file 'poems.txt' and find out whether it contains the word 'twinkle'.
+
+with open("poem.txt") as f:
+    text = f.read()
+
+if "twinkle" in text.lower():
+    print("The word 'twinkle' is present in the file.")
+else:
+    print("The word 'twinkle' is not present in the file.")
+
+
+with open("starboy.txt") as a:
+    text = a.read()
+
+    if "we don't pray for love, we just pray for cars" in text.lower():
+        print("THE WORD IS PRESENT!..")
+    else:
+        print("THE WORLD IS NOT PRESENT..!")
+
+# The game() function in a program lets a user play a game and return the score as an integer. you need to read a file 'Hi-score.txt' which is either blank or contains the previousHi-Score. You need to write a program to update the Hi-score whenever the game() function bracks the Hi-score..
+
+def game():
+    print("You are playing the game..:")
+
+    score = random.randint(1, 62)
+    # Fetch hiScore 
+    with open("hiscore.txt") as f:
+        hiscore = f.read()
+        if hiscore != "":
+            hiscore = int(hiscore)
+        else:
+            hiscore = 0
+
+    print(f"Your score:{score}")
+
+    if score > hiscore:
+        # write this hiscore to the file
+        with open("hiscore.txt", "w") as f:
+            f.write(str(score))
+
+    return score
+
+game()
