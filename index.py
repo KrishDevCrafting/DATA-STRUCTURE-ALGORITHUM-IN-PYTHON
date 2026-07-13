@@ -1,4 +1,5 @@
 import random
+import re
 import pyjokes
 
 variable = pyjokes.get_joke()
@@ -468,3 +469,17 @@ def generateTable(n):
 
 for n in range(2, 21):
     generateTable(n)
+
+
+
+word = "donkey"
+
+
+
+with open("file.txt","r") as f:
+    content = f.read()
+
+contentNew = re.sub(word, "#####", content, flags=re.IGNORECASE)
+
+with open("file.txt", "w")as f:
+    f.write(contentNew)
