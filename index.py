@@ -1,10 +1,10 @@
 import random
 import re
-import pyjokes
+# import pyjokes
 
-variable = pyjokes.get_joke()
+# variable = pyjokes.get_joke()
 
-print(variable)
+# print(variable)
 
 
 a = 5
@@ -483,3 +483,28 @@ contentNew = re.sub(word, "#####", content, flags=re.IGNORECASE)
 
 with open("file.txt", "w")as f:
     f.write(contentNew)
+
+
+# OBJECT ORITENTED PROGRAMMING....
+
+
+class Employee:
+    name = "Harry"
+    language = "python"
+    salary= 1200000
+
+
+# dunder method in python...
+    def __init__(self,name,language,salary):
+     self.name= name
+     self.salary = salary
+     self.language = language
+     print("I am creating an obeject...!")
+
+    def getinfo(self):
+     print(f"The language is {self.language}. The salary is {self.salary}")
+
+
+krish = Employee("Krish",140000,"Javascrit")    
+krish.getinfo()
+
