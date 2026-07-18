@@ -1,4 +1,6 @@
+from random import randint
 import random
+import math
 import re
 # import pyjokes
 
@@ -508,3 +510,69 @@ class Employee:
 krish = Employee("Krish",140000,"Javascrit")    
 krish.getinfo()
 
+# PRACTISE SET CHAPTER 10...
+#1. Create a class "PRogrammer" for storing information of few programmers working at microsoft...
+class Programmer:
+    company = "Microsoft"
+    def __init__(self,name,salary,pin):
+      self.name =  name
+      self.salary = salary
+      self.pin = pin
+
+
+p = Programmer("Harry",120000,24005)
+print(p.name,p.salary,p.pin,p.company)
+
+# 2. Write a class "calculator" capable of finding square, cube and square root of a number.
+class calculater:
+    def __init__(self,n):
+        self.n = n
+    
+    def square(self):
+     print(f"The Square is {self.n*self.n}")
+
+    def cube(self):
+     print(f"The Cube is {self.n*self.n*self.n}")
+
+    def squareRoot(self):
+      print(f"The SquareRoot is {math.sqrt(self.n)}")
+a = calculater(2)
+
+a.square()
+a.cube()
+a.squareRoot()
+
+
+# def sq(n):
+#    fn = n*n
+#    print(f"The square value {fn}")
+
+
+# sq(16)
+
+# Write a class train which has methods to book a ticket, get status(no of seats) and get fare information of train running under Indian Railways
+
+# class Train:
+    
+#     def __init__(self, trainNo):
+#         self.trainNo = trainNo
+
+#     def book(self, fro, to):
+#         print(f"Ticket is booked in train no: {self.trainNo} from {fro} to {to}")   
+    
+#     def getStatus(self):
+#         print(f"Train no: {self.trainNo} is running on time")
+
+#     def getFare(self, fro, to):
+#         print(f"Ticket fare in train no: {self.trainNo} from {fro} to {to} is {randint(222, 5555)}")    
+
+# t = Train(12399)
+
+# t.book("Rampur","Delhi")
+   
+# t.getStatus()
+   
+# t.getFare("rampur","Delhi")
+    
+# Inheritance
+    
