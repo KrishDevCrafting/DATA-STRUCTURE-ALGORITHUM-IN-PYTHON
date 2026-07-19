@@ -575,4 +575,73 @@ a.squareRoot()
 # t.getFare("rampur","Delhi")
     
 # Inheritance
+class Employee:
+    company= "ITC"
+    def show(self):
+        print(f"The name is {self.name} and the salary is {self.salary}")
+
+class Programmer(Employee):
+    company = "ITC Infotect" 
+    
+    def showLanguage(self):
+        print(f"The name is {self.name} and he is good with {self.language} language")
+
+a = Employee()
+b = Programmer()
+
+print(a.company,b.company)
+
+class Employee:
+    company = "Google"
+
+    def __init__(self, name):
+        self.name = name
+
+e1 = Employee("Krish")
+e2 = Employee("Rahul")
+
+e1.company = "Microsoft"
+
+print(e1.company)
+print(e2.company)
+print(Employee.company)
+
+
+# multilevel_inheritance
+
+class student:
+    a = 1
+class marks(student):
+    b = 2
+class subjects(student):
+    c = 3
+
+o = student()
+print(o.a)
+
+o = marks()
+print(o.a,o.b)
+
+o = subjects()
+print(o.a,o.c)
+
+# Class Method
+# A class method is a method which bound to the class and not the object of the class.
+# @classmethod
+# class  Employee:
+#     a = 1
+
+#     @classmethod
+#     def show(cls):
+#         print(f"The class attribute of a is {cls.a}")
+
+# e = Employee()
+
+# e.a = 45
+
+# e.show()
+
+# Property_decorator
+class Employee:
+    a = 1
     
