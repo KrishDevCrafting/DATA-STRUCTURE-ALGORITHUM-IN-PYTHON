@@ -643,5 +643,72 @@ print(o.a,o.c)
 
 # Property_decorator
 class Employee:
-    a = 1
-    
+    def __init__(self):
+        self.salary = 40000
+        self.bonus = 10000
+
+    def total_salary(self):
+     return self.salary + self.bonus
+
+e = Employee()
+print(e.total_salary())  # Output: 50000   
+
+# With property decorator we can access the method as an attribute without using ().
+
+class Employee:
+    def __init__(self):
+        self.salary = 40000
+        self.bonus = 10000
+
+    @property
+    def total_salary(self):
+        return self.salary + self.bonus
+e = Employee()
+print(e.total_salary)
+
+
+# Practise Set Chapter 11
+
+# Create a class (2-D Vector) and use it to create class representing a 3-D vector.
+
+class TwoDVector:
+    def __init__(self,i,j):
+        self.i = i
+        self.j = j
+
+    def show(self):
+        print(f"The vector is {self.i}i+{self.j}j")
+
+class ThreeDVector(TwoDVector):
+    def __init__(self,i,j,k):
+        super().__init__(i,j)
+        self.k = k
+
+    def show(self):
+        print(f"The vector is {self.i}i+{self.j}j+{self.k}k")    
+
+a = TwoDVector(2,3)
+a.show()
+b = ThreeDVector(1,2,3)
+b.show()
+
+# 2 Create a Class 'pets' form a class "Animal" and futher create a class "Dog" from "pets". Add a Method "bark" to class 'Dog"
+
+
+class Animal:
+  pass
+
+class Pets(Animal):
+    pass
+
+class Dog(Pets):
+
+    @staticmethod
+    def bark():
+        print("Woof Woof!")
+
+d = Dog()
+d.bark()        
+
+# 3 create a class 'Employee' and add salary and increment properties to it..
+
