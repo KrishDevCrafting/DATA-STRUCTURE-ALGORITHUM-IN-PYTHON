@@ -694,8 +694,6 @@ b = ThreeDVector(1,2,3)
 b.show()
 
 # 2 Create a Class 'pets' form a class "Animal" and futher create a class "Dog" from "pets". Add a Method "bark" to class 'Dog"
-
-
 class Animal:
   pass
 
