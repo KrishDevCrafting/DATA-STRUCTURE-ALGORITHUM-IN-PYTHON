@@ -643,27 +643,3 @@ print(o.a,o.c)
 
 # Property_decorator
 
-class Employee:
-    def __init__(self):
-        self.salary = 50000
-        self.bonus = 10000
-
-    def total_salary(self):
-        return self.salary + self.bonus
-
-e = Employee()
-
-print(e.total_salary())
-# ........................
-class Employee:
-    def __init__(self):
-        self.salary = 50000
-        self.bonus = 10000
-
-    @property
-    def total_salary(self):
-        return self.salary + self.bonus
-
-e = Employee()
-
-print(e.total_salary)
