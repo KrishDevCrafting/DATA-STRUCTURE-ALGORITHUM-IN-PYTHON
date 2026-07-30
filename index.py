@@ -922,3 +922,19 @@ output = reduce(largest, numbers)
 
 print(output)
 # Pracrise SET...
+table = [str(3*i) for i in range(1,11)]
+
+s = "\n".join(table)
+print(s)
+
+# Find the Greatest Number...
+
+num = [1,2,3,4,50,6,7,10]
+
+def FindNum(a,b):
+    if(a>b):
+        return a
+    return b
+
+outCome = reduce(FindNum,num)
+print(f"Greater Number is {outCome}")
