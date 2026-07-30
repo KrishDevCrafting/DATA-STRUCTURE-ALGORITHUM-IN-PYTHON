@@ -2,6 +2,7 @@ from random import randint
 import random
 import math
 import re
+from functools import reduce
 # import pyjokes
 
 # variable = pyjokes.get_joke()
@@ -163,9 +164,9 @@ while i < len(kk):
 print(len(kk))
 
 
-list = [1,2,3,4,5,7,8,9,10]
+numbers = [1,2,3,4,5,7,8,9,10]
 
-for item in list:
+for item in numbers:
     print(item)
 else:
     print("done")
@@ -753,3 +754,171 @@ c1 = Complex(1, 2)
 c2 = Complex(3, 4)
 print(c1 + c2)  # Output: 4 + 6i
 print(c1 * c2)  # Output: -5 + 10i
+
+
+# ////////////////////////////////////////
+# Chapter 12 Advanced Python Programming
+
+# walrus operator == Assigment expression hai
+
+# Assigns a value to a variable and returns that value in a single step (inside an expression).
+
+
+# (variable := expression)
+
+def fetch_user_batch(page: int) -> list[str]:
+    # Simulates an API call that returns empty list on page 4
+    api_db = {1: ["Alice", "Bob"], 2: ["Charlie", "David"], 3: ["Eve"]}
+    return api_db.get(page, [])
+
+page = 1
+users = fetch_user_batch(page)  # 1st call
+
+# Assigns 'users' and checks 'bool(users)' in a single evaluation
+while (users := fetch_user_batch(page)):
+    print(f"Processing page {page}: {users}")
+    page += 1
+
+class Person:
+    def __init__(self, initial_page: int =1):
+     
+     self.page = initial_page
+    
+     self.usersApi = {1:["Ishigami Senku" ,"Suika", "Gen Asagiri"], 2:["Tsukasa ShishiouZoro", "Hyoga"], 3:["Dr Xeno.."]}
+    
+    def fetch_user_batch(self) -> list[str]:
+       '''Fetches a batch of users from the simulated API.'''
+       batch = self.usersApi.get(self.page, [])
+       self.page += 1  # Move to the next page for the next call
+       return batch 
+    
+    # Initialize the Object.....
+fetcher = Person()
+
+    # Using the walrus operator to fetch and process users in a loop
+
+while (users := fetcher.fetch_user_batch()):
+        print(f"Processing page {fetcher.page - 1}: {users}") 
+
+# Types Definition in python:
+age: int = 25 
+
+def greeting(name: str) ->str:
+    return f"Hiiiiiiiiiiiiiiiiii,{name}"
+print(greeting("Radha...."))
+# TRY or Exception
+
+# try: 
+#     a = int(input("ENTER THE NUMBER..."))
+#     print(a)
+
+# except Exception as e:
+#     print(e)    
+
+# print("still working....")
+
+# def fb():
+#     try:
+#         n = int(input("Enter the number: "))
+#     except ValueError:
+#         print("Please enter a valid number.")
+#         return
+
+#     if n % 2 == 0:
+#         print("EVEN NUMBER")
+#     else:
+#         print("ODD NUMBER")
+
+# fb()
+
+# Chapter 13 
+
+square = lambda x:x*x
+
+print(square(6))
+
+name = ["Krish" ,"Love" ,"BMW" ,"sports" ,"Cars"]
+
+output = "_".join(name)
+
+print(output)
+
+# Formate String Method
+a = "{} is a smart guy in the domain of {}".format("krish","Computer_science.")
+print(a)
+
+# Map , Fliter Reduce:
+# map() applies a function to every item in an iterable and returns a map object. It is commonly used to transform data without writing an explicit loop.
+
+
+def CovertIntoCapital(ab):
+    return ab.upper()
+
+ab = ["krish", "rahul", "aman"]
+
+FinalOutput = list(map(CovertIntoCapital,ab))
+
+print(FinalOutput)
+
+
+
+# Without using a for loop, use map() to convert:   
+# Without using a for loop, use map() to convert:
+
+
+
+def only_names(student):
+    return student.get("name").capitalize()
+
+students = [
+    {"name": "krish", "marks": 80},
+    {"name": "rahul", "marks": 65},
+    {"name": "aman", "marks": 90},
+    {"name": "rahul", "marks":40}
+]
+
+result = list(map(only_names, students))
+
+print(result)
+
+# Fliters
+L = [1,2,3,4,5,6,7]
+def even(n):
+    if(n%2 ==00):
+        return True
+    return False
+
+onlyEven = filter(even,L)
+print(list(onlyEven))
+
+
+# Fliters
+def passed(student):
+    return student["marks"] >= 80
+
+result = list(filter(passed, students))
+
+print(result)
+# Reduce Example:
+def sum(a,b):
+     return a + b
+output = reduce(sum,L)
+
+print(output)
+
+
+# Find the largest number Without using sum()
+
+
+numbers = [12, 56, 23, 98, 45]
+
+def largest(x, y):
+    if x > y:
+        return x
+    else:
+        return y
+
+output = reduce(largest, numbers)
+
+print(output)
+# Pracrise SET...
