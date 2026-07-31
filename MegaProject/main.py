@@ -4,13 +4,19 @@ import webbrowser
 
 recognizer = sr.Recognizer()
 
-def ProcessCommand(C):
-    if "open google" in C.lower():
+def ProcessCommand(c):
+    c_lower = c.lower()
+    if "open google" in c_lower:
+        speak("Opening Google Sir")
         webbrowser.open("https://www.google.com")
-    elif "open youtube" in C.lower():
+    elif "open youtube" in c_lower:
+        speak("Opening YouTube Sir")
         webbrowser.open("https://www.youtube.com")
-    elif "open github" in C.lower():
+    elif "open github" in c_lower:
+        speak("Opening GitHub Sir")
         webbrowser.open("https://www.github.com")
+    else:
+        speak("I am not sure how to handle that command yet.")
 
 
 def speak(text):
@@ -31,19 +37,25 @@ if __name__ == "__main__":
             print("\nListening...")
             try:
                 # Increased timeout to give you more time to start talking
-                audio = recognizer.listen(source, timeout=2, phrase_time_limit=5)
+                audio = recognizer.listen(source, timeout=3, phrase_time_limit=5)
                 print("Recognizing...")
                 
                 text = recognizer.recognize_google(audio)
-                if "jarvis" in text.lower():
-                    speak("Yes Sir, How can I help you?")
-                    # Listen for the next command after acknowledging
-                    print("Jarvis listening for your command...")
-                    audio = recognizer.listen(source, timeout=2, phrase_time_limit=5)
-                    command = recognizer.recognize_google(audio)
-                    print(f"You said: {command}")
-                    ProcessCommand(command)
                 print(f"You said: {text}")
+                
+                if "jarvis" in text.lower():
+                    # Check if command was already spoken in the same sentence (e.g. "Jarvis open Google")
+                    command_part = text.lower().replace("jarvis", "").strip()
+                    if command_part:
+                        ProcessCommand(command_part)
+                    else:
+                        # Two-step mode: User only said "Jarvis"
+                        speak("Yes Sir, How can I help you?")
+                        print("Jarvis listening for your command...")
+                        audio = recognizer.listen(source, timeout=4, phrase_time_limit=5)
+                        command = recognizer.recognize_google(audio)
+                        print(f"Command: {command}")
+                        ProcessCommand(command)
                 
             except sr.WaitTimeoutError:
                 # Catches silence without crashing the program
