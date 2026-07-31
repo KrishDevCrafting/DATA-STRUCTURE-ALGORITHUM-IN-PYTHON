@@ -16,13 +16,25 @@ def ProcessCommand(c):
     elif "open github" in c_lower:
         speak("Opening GitHub Sir")
         webbrowser.open("https://www.github.com")
-    elif c_lower.startswith("play "):
-        song_name = c_lower.replace("play ", "").strip()
-        if song_name in musicLibrary.music:
-            speak(f"Playing {song_name} Sir")
-            webbrowser.open(musicLibrary.music[song_name])
+    elif "play" in c_lower or any(song in c_lower for song in musicLibrary.music):
+        # 1. First check if any song from our music library is mentioned
+        found_song = None
+        for song in musicLibrary.music:
+            if song in c_lower or song.replace(" ", "") in c_lower.replace(" ", ""):
+                found_song = song
+                break
+        
+        if found_song:
+            speak(f"Playing {found_song} Sir")
+            webbrowser.open(musicLibrary.music[found_song])
         else:
-            speak(f"Song {song_name} is not in your library Sir.")
+            # 2. If it's a song not in our dictionary, search & play on YouTube!
+            search_term = c_lower.replace("play", "").replace("song", "").strip()
+            if search_term:
+                speak(f"Playing {search_term} on YouTube Sir")
+                webbrowser.open(f"https://www.youtube.com/results?search_query={search_term}")
+            else:
+                speak("Which song would you like to play Sir?")
     else:
         speak("I am not sure how to handle that command yet.")
 
