@@ -15,9 +15,15 @@ def ProcessCommand(c):
     elif "open github" in c_lower:
         speak("Opening GitHub Sir")
         webbrowser.open("https://www.github.com")
+    elif c.lower().split(" ")[1]
+       in music:
+            song_name = c.lower().split(" ")[1]
+            speak(f"Playing {song_name} Sir")
+            webbrowser.open(music[song_name])
     else:
         speak("I am not sure how to handle that command yet.")
 
+ 
 
 def speak(text):
     engine = pyttsx3.init()
