@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import pyttsx3
 import webbrowser
+import musicLibrary
 
 recognizer = sr.Recognizer()
 
@@ -15,11 +16,13 @@ def ProcessCommand(c):
     elif "open github" in c_lower:
         speak("Opening GitHub Sir")
         webbrowser.open("https://www.github.com")
-    elif c.lower().split(" ")[1]
-       in music:
-            song_name = c.lower().split(" ")[1]
+    elif c_lower.startswith("play "):
+        song_name = c_lower.replace("play ", "").strip()
+        if song_name in musicLibrary.music:
             speak(f"Playing {song_name} Sir")
-            webbrowser.open(music[song_name])
+            webbrowser.open(musicLibrary.music[song_name])
+        else:
+            speak(f"Song {song_name} is not in your library Sir.")
     else:
         speak("I am not sure how to handle that command yet.")
 
