@@ -4,8 +4,14 @@ import webbrowser
 
 recognizer = sr.Recognizer()
 
-def ProcessCommand():
-    pass
+def ProcessCommand(C):
+    if "open google" in C.lower():
+        webbrowser.open("https://www.google.com")
+    elif "open youtube" in C.lower():
+        webbrowser.open("https://www.youtube.com")
+    elif "open github" in C.lower():
+        webbrowser.open("https://www.github.com")
+
 
 def speak(text):
     engine = pyttsx3.init()
@@ -36,7 +42,7 @@ if __name__ == "__main__":
                     audio = recognizer.listen(source, timeout=2, phrase_time_limit=5)
                     command = recognizer.recognize_google(audio)
                     print(f"You said: {command}")
-                    ProcessCommand()
+                    ProcessCommand(command)
                 print(f"You said: {text}")
                 
             except sr.WaitTimeoutError:
