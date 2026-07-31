@@ -29,15 +29,14 @@ if __name__ == "__main__":
                 print("Recognizing...")
                 
                 text = recognizer.recognize_google(audio)
-                if(text.lower() == "jarvis"):
+                if text.lower() == "jarvis":
                     speak("Yes Sir, How can I help you?")
                     # Listen for the next command after acknowledging
-                    with sr.Microphone() as source:
-                        print(" jarvis Listening for your command...")
-                        audio = sr.listen(source, timeout=2, phrase_time_limit=5)
-                        command = sr.recognize_google(audio)
-                        print(f"You said: {command}")
-                        ProcessCommand()
+                    print("Jarvis listening for your command...")
+                    audio = recognizer.listen(source, timeout=2, phrase_time_limit=5)
+                    command = recognizer.recognize_google(audio)
+                    print(f"You said: {command}")
+                    ProcessCommand()
                 print(f"You said: {text}")
                 
             except sr.WaitTimeoutError:
