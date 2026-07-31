@@ -23,7 +23,9 @@ while True:
         try:
             text = reconizer.recognize_google(audio)
             print(f"You said: {text}")
+            break 
         except sr.UnknownValueError:
             print("Could not understand audio")
         except sr.RequestError as e:
             print(f"Could not request results from Google Speech Recognition service; {e}")
+            
