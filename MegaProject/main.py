@@ -3,12 +3,12 @@ import pyttsx3
 import webbrowser
 
 recognizer = sr.Recognizer()
-engine = pyttsx3.init()
 
 def ProcessCommand():
     pass
 
 def speak(text):
+    engine = pyttsx3.init()
     engine.say(text)
     engine.runAndWait()
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
                 print("Recognizing...")
                 
                 text = recognizer.recognize_google(audio)
-                if text.lower() == "jarvis":
+                if "jarvis" in text.lower():
                     speak("Yes Sir, How can I help you?")
                     # Listen for the next command after acknowledging
                     print("Jarvis listening for your command...")
