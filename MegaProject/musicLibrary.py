@@ -1,5 +1,4 @@
-# Music Library for Jarvis Voice Assistant
-# Add any song name and its YouTube URL here!
+
 
 music = {
     "starboy": "https://www.youtube.com/watch?v=34Na4j8AVgA",
