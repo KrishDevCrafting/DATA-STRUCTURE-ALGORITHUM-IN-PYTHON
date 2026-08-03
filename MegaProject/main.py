@@ -16,6 +16,11 @@ def ProcessCommand(c):
     elif "open github" in c_lower:
         speak("Opening GitHub Sir")
         webbrowser.open("https://www.github.com")
+    elif "open pornhb" in c_lower:
+            speak("Opening Pornhub Sir")
+            webbrowser.open("https://www.pornhub.com")
+
+        
     elif "play" in c_lower or any(song in c_lower for song in musicLibrary.music):
         # 1. First check if any song from our music library is mentioned
         found_song = None
@@ -35,10 +40,11 @@ def ProcessCommand(c):
                 webbrowser.open(f"https://www.youtube.com/results?search_query={search_term}")
             else:
                 speak("Which song would you like to play Sir?")
+
+                
     else:
         speak("I am not sure how to handle that command yet.")
 
- 
 
 def speak(text):
     engine = pyttsx3.init()
